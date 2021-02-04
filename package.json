@@ -1,0 +1,42 @@
+{
+  "name": "example-graphiql-create-react-app",
+  "version": "0.1.11-alpha.8",
+  "private": true,
+  "dependencies": {
+    "graphiql": "^1.3.2",
+    "graphql": "^15.5.0",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-scripts": "3.4.1"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "proxy": "eapi-proxy -d https://cs-messaging-dispatcher-eu-dev.herokuapp.com -k ./private.pem -c 00D3z000001hjCh -p 3333 --use-dispatcher",
+    "start-with-proxy": "npm run proxy & npm start && kill$!"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "@cloudsense/eapi-sec-proxy": "^4.13.0",
+    "@types/react": "^17.0.1",
+    "@types/react-dom": "^17.0.0",
+    "env-cmd": "^10.1.0",
+    "eslint-config-react-app": "^5.2.1",
+    "typescript": "^4.1.3",
+    "worker-loader": "^2.0.0"
+  }
+}
